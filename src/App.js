@@ -24,7 +24,7 @@ function App() {
     setUrl(e.target.value);
     console.log(urlState);
 
-    fetch("http://localhost:5000/site_change", {
+    fetch("https://bird-chat-app.vercel.app/site_change", {
       method: "POST",
       headers: {
         'Content-Type' : 'application/json'
@@ -52,7 +52,7 @@ function App() {
     setMessageList((prevList) => [...prevList, {agent: "user", text: "👤  " + userChat}]);
     userInputRef.current.value = "";
 
-    fetch("http://localhost:5000/query", {
+    fetch("https://bird-chat-app.vercel.app/query", {
       method: "POST",
       headers: {
         'Content-Type' : 'application/json'
