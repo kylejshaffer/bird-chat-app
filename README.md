@@ -1,2 +1,2 @@
 # bird-chat-app
-Repo for React-Flask app utilizing RAG LLM for answering questions about ornithological blog posts.
+Repo for React-Flask app utilizing RAG LLM for answering questions about ornithological blog posts. Details coming soon...
