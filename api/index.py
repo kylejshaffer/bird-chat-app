@@ -39,7 +39,7 @@ def reset_vector_store():
     try:
         rag.doc_processor.reset_vector_store(data['url'])
         status["STATUS"] = "OK"
-        status["STATUS_CODE"] = 405
+        status["STATUS_CODE"] = 200
         return status
     except:
         return status
