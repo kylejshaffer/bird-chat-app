@@ -77,7 +77,7 @@ function App() {
         <Text w="95vh">
           This app allows you to browse blog posts about several bird species on the right-hand pane,
           and enter questions to an AI agent in the left chat pane. Specifically, this app uses a 
-          <Link href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation" isExternal>Retrieve-and-Generate</Link> <b>(RAG)</b> LLM model to ground chat model responses in the content of the
+           <Link href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation" color="blue.400" isExternal>Retrieve-and-Generate</Link> <b>(RAG)</b> LLM model to ground chat model responses in the content of the
           site at the right. You can read more about the technical details <Link color="blue.400" href="https://github.com/kylejshaffer/bird-chat-app/blob/main/README.md" isExternal>here</Link>.
         </Text>
         <HStack
