@@ -1,4 +1,5 @@
-# Bird Chat
+# Bird Chat 🦜
+
 This repo contains frontend code for an app called [Bird-Chat](https://bird-chat-app.vercel.app/). The app allows users to select from three blog posts about different birds, and to chat with an AI agent about these blog posts. The backend code for this app is hosted [here](https://github.com/kylejshaffer/bird-chat-backend). There are three main components that make up the app - the LLM-based AI agent, a Flask backend API layer that handles requests between the UI and the AI agent, and the React-based frontend that users interact with.
 
 ## Retrieval-augmented generation with Large Language Models (RAG-LLM)
@@ -19,4 +20,8 @@ This vector store contains encoded representations we can use to ground the LLM'
   <li>Return the text chunks associated with the top-n most similar vectors</li>
   <li>Use these concatenated relevant text chunks that were retrieved as part of a prompt to the LLM during generation</li>
 </ol>
+
+For many cases, persistent vector databases like [Chroma DB](https://www.trychroma.com/) are most useful since these are designed to store lots of data and are tuned for very low-latency queries. For this app, we simply use an in-memory vector store provided by [LangChain](https://python.langchain.com/api_reference/core/vectorstores/langchain_core.vectorstores.in_memory.InMemoryVectorStore.html). We can get away with doing this since the documents are not terribly long, and the app has been written in such a way that only three blog posts are available for querying.
+
+For tooling, the RAG system is implemented using [LangChain](https://python.langchain.com/), and the functionality was adapted from this [tutorial](https://python.langchain.com/docs/tutorials/rag/). Things have been rewritten in a less "scripty" style, and you can check out implmentation details in the backend repo for the app [here](https://github.com/kylejshaffer/bird-chat-backend/).
 
