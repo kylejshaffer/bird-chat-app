@@ -25,3 +25,7 @@ For many cases, persistent vector databases like [Chroma DB](https://www.trychro
 
 For tooling, the RAG system is implemented using [LangChain](https://python.langchain.com/), and the functionality was adapted from this [tutorial](https://python.langchain.com/docs/tutorials/rag/). Things have been rewritten in a less "scripty" style, and you can check out implmentation details in the backend repo for the app [here](https://github.com/kylejshaffer/bird-chat-backend/).
 
+## Flask API Layer
+While the above LangChain tutorial provides a good sense of how to build a graph of operations with LangChain, it only functions as a standalone script that someone would need to run at the command line. Since this project was aimed at building a web-app someone could interact with in the browser, the code needed to be refactored quite a bit, and a plan was needed for exposing the RAG-LLM output to a frontend. Flask ended up being the perfect tool for this.
+
+(In progress...)
